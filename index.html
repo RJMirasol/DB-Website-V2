@@ -174,8 +174,8 @@
               <span class="practice-icon">⌂</span>
               <h3>Property & Conveyancing</h3>
               <p>
-                Expert conveyancing for residential and commercial property
-                transactions across the Inner West and greater New South Wales.
+                Expert conveyancing for all types of property across Sydney and
+                New South Wales.
               </p>
             </div>
             <div class="practice-card fade-in" style="transition-delay: 0.08s">
@@ -183,8 +183,9 @@
               <span class="practice-icon">⚖</span>
               <h3>Wills & Estates</h3>
               <p>
-                Comprehensive estate planning, will drafting, probate
-                applications, and administration of deceased estates.
+                Estate planning, will drafting, powers of attorney and
+                appointments of enduring guardians, applications for probate and
+                letters of administration, and management of deceased estates.
               </p>
             </div>
             <div class="practice-card fade-in" style="transition-delay: 0.16s">
@@ -192,8 +193,8 @@
               <span class="practice-icon">◈</span>
               <h3>Commercial & Business Law</h3>
               <p>
-                Structuring, contracts, mergers and acquisitions, business
-                sales, shareholder agreements, and general commercial advice.
+                Structuring, contracts, business sale and purchase, commercial
+                and retail leases and general commercial advice.
               </p>
             </div>
             <div
@@ -251,8 +252,8 @@
               <h3>Proven Experience</h3>
               <p>
                 Our combined legacy spans decades of legal practice in New South
-                Wales. The expertise accumulated through Clarke and Fisher
-                reflects a depth that takes generations to build.
+                Wales. The accumulated expertise of Peter Fisher and now David
+                Clarke reflects a depth that takes generations to build.
               </p>
             </div>
             <div class="why-item fade-in" style="transition-delay: 0.15s">
@@ -268,15 +269,95 @@
         </div>
       </section>
 
-      <!-- TESTIMONIAL STRIP -->
-      <div class="testimonial-strip fade-in">
+      <!-- TESTIMONIAL CAROUSEL -->
+      <div class="testimonial-carousel fade-in">
         <div class="container">
-          <blockquote>
-            "Their advice was measured, thorough, and exactly what we needed.
-            We've trusted this firm with every major legal matter our family has
-            faced."
-            <cite>— Long-standing client, Annandale</cite>
-          </blockquote>
+          <div class="carousel-header">
+            <span class="overline">Client Testimonials</span>
+            <div class="gold-rule center"></div>
+            <h2 style="color: #fff">Trusted by Our <em>Community</em></h2>
+          </div>
+          <div class="carousel-track-wrapper">
+            <button
+              class="carousel-btn prev"
+              aria-label="Previous"
+              onclick="carouselMove(-1)"
+            >
+              &#8592;
+            </button>
+            <div class="carousel-track">
+              <div class="carousel-slides" id="carouselSlides">
+                <div class="carousel-slide">
+                  <div class="stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span
+                    ><span>★</span>
+                  </div>
+                  <blockquote>
+                    Their advice was measured, thorough, and exactly what we
+                    needed. We've trusted this firm with every major legal
+                    matter our family has faced over the years.
+                  </blockquote>
+                  <cite>— Long-standing client, Annandale</cite>
+                </div>
+                <div class="carousel-slide">
+                  <div class="stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span
+                    ><span>★</span>
+                  </div>
+                  <blockquote>
+                    The conveyancing was handled seamlessly — they guided us
+                    through every step with clarity and patience. We never felt
+                    left in the dark.
+                  </blockquote>
+                  <cite>— Property purchaser, Leichhardt</cite>
+                </div>
+                <div class="carousel-slide">
+                  <div class="stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span
+                    ><span>★</span>
+                  </div>
+                  <blockquote>
+                    When my father passed, the estate administration felt
+                    overwhelming. Clarke &amp; Fisher handled everything with
+                    genuine compassion and exceptional professionalism.
+                  </blockquote>
+                  <cite>— Estate client, Glebe</cite>
+                </div>
+                <div class="carousel-slide">
+                  <div class="stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span
+                    ><span>★</span>
+                  </div>
+                  <blockquote>
+                    As a small business owner, I value solicitors who speak
+                    plainly and give real advice. These are exactly those
+                    people. Highly recommended to anyone in the Inner West.
+                  </blockquote>
+                  <cite>— Business client, Newtown</cite>
+                </div>
+                <div class="carousel-slide">
+                  <div class="stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span
+                    ><span>★</span>
+                  </div>
+                  <blockquote>
+                    I've used several solicitors over the years and none have
+                    matched the care and attention I receive here. They treat
+                    you like a person, not a file number.
+                  </blockquote>
+                  <cite>— Repeat client, Rozelle</cite>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-btn next"
+              aria-label="Next"
+              onclick="carouselMove(1)"
+            >
+              &#8594;
+            </button>
+          </div>
+          <div class="carousel-dots" id="carouselDots"></div>
         </div>
       </div>
 
@@ -295,7 +376,7 @@
           </h2>
           <p style="color: rgba(255, 255, 255, 0.55); margin: 1rem 0 2rem">
             Contact us to arrange a consultation. We're available Monday to
-            Thursday 9am–5pm and Friday 9am–2pm.
+            Thursday 9am–5pm and Friday 9am–1pm.
           </p>
           <div
             style="
@@ -364,54 +445,65 @@
                 people, not the other way around.
               </p>
               <p style="margin-top: 1rem">
-                Situated at 145 Parramatta Road in the heart of Annandale, our
-                practice has long been a trusted destination for Inner West
-                residents and businesses seeking sound, considered legal advice.
-                We do not measure our success in volume; we measure it in
-                outcomes — and in the enduring relationships we build with every
-                client who walks through our door.
+                Situated at 145 Parramatta Road, Annandale, our practice has
+                long been a trusted destination for Inner West residents and
+                businesses seeking sound, considered legal advice. We do not
+                measure our success in volume; we measure it in outcomes — and
+                in the enduring relationships we build with every client who
+                walks through our door.
               </p>
               <p style="margin-top: 1rem">
-                Our practitioners bring deep expertise across property law,
-                estate planning, and commercial matters. We approach every
-                instruction with the same seriousness of purpose, whether
-                drafting a will or structuring a complex business transaction.
+                We bring deep expertise across property law, estate planning,
+                commercial and business matters. We approach every matter with
+                the same seriousness of purpose, whether drafting a simple will
+                or handling more complex legal issues.
               </p>
 
               <div class="timeline" style="margin-top: 3rem">
                 <div class="timeline-item">
-                  <div class="timeline-year">J.H. Fisher & Sons</div>
-                  <h3>Fisher Solicitors Established</h3>
+                  <div class="timeline-year" style="font-size: 1.2rem">
+                    J.H. Fisher & Sons
+                  </div>
+                  <br />
                   <p style="font-size: 0.88rem">
-                    J.H. Fisher & Sons began serving the Annandale community,
-                    building a reputation for diligence and integrity across
-                    property, estate, and local legal matters.
+                    Jack Fisher began his practice in 1929 in Sydney CBD. In
+                    1957 he opened our Annandale office later being joined by
+                    his three Sons. His Son, Peter Fisher has been a Solicitor
+                    for over 60 years and he ran the Annandale office for nearly
+                    50.
                   </p>
                 </div>
                 <div class="timeline-item">
-                  <div class="timeline-year">David S. Clarke & Associates</div>
-                  <h3>Clarke & Associates Founded</h3>
+                  <div class="timeline-year" style="font-size: 1.2rem">
+                    David S. Clarke & Associates
+                  </div>
+                  <br />
                   <p style="font-size: 0.88rem">
-                    David S. Clarke brought together a team of experienced
-                    solicitors with a focus on commercial, property, and estate
-                    matters across Inner West Sydney.
+                    David Clarke has been a Solicitor for more than 35 years and
+                    his practice has been established for more than 30 years.
                   </p>
                 </div>
                 <div class="timeline-item">
-                  <div class="timeline-year">Combined Practice</div>
-                  <h3>Association of Both Firms</h3>
+                  <div class="timeline-year" style="font-size: 1.2rem">
+                    Combined Practice
+                  </div>
+                  <br />
                   <p style="font-size: 0.88rem">
-                    The two practices joined under a shared banner, offering
-                    clients a broader, more cohesive range of legal services —
-                    with the personal attention both firms were known for.
+                    In 2010, David Clarke merged the two practices joined under
+                    a shared banner, offering clients a broader, more cohesive
+                    range of legal services — with the personal attention both
+                    firms were known for. Peter Fisher retired in 2021 but
+                    remains a consultant.
                   </p>
                 </div>
                 <div class="timeline-item">
-                  <div class="timeline-year">Today</div>
-                  <h3>Serving Annandale & Beyond</h3>
+                  <div class="timeline-year" style="font-size: 1.2rem">
+                    Today
+                  </div>
+                  <br />
                   <p style="font-size: 0.88rem">
                     We continue to serve individuals, families, and businesses
-                    across the Inner West and greater NSW, guided by our
+                    across the Inner West Sydney and NSW, guided by our
                     longstanding values of discretion, professionalism, and
                     genuine client care.
                   </p>
@@ -463,8 +555,8 @@
                   Office Hours
                 </h3>
                 <p style="font-size: 0.88rem">
-                  Monday – Thursday: 9:00am – 5:00pm<br />Friday: 9:00am –
-                  2:00pm
+                  Monday – Thursday: 9:00am – 5:00pm<br />Friday: 9:00am – 1
+                  :00pm
                 </p>
                 <p style="font-size: 0.88rem; margin-top: 0.5rem">
                   <a
@@ -581,15 +673,14 @@
               <div>
                 <p>
                   Whether you are purchasing your first home, selling an
-                  investment property, or transferring title in a commercial
-                  transaction, our conveyancing solicitors manage every step of
-                  the process with precision and care.
+                  investment property, or have a commercial lease matter, we
+                  manage every step of the process with precision and care.
                 </p>
                 <p style="margin-top: 1rem">
-                  We handle contract review and negotiation, section 149
-                  certificates, title searches, stamp duty advice, settlement
-                  coordination, and all related correspondence — ensuring your
-                  transaction proceeds smoothly from exchange to settlement.
+                  We handle contract review and negotiations, searches and
+                  inquiries, stamp duty advice, and settlement coordination —
+                  ensuring your transaction proceeds smoothly from exchange to
+                  completion.
                 </p>
                 <div
                   style="
@@ -669,16 +760,17 @@
               <div>
                 <p>
                   A properly drafted will is one of the most important documents
-                  you will ever sign. Our solicitors take the time to understand
-                  your family, your assets, and your wishes — drafting a will
-                  that is clear, legally robust, and reflective of your
-                  intentions.
+                  you will ever sign. We take the time to understand your
+                  family, your assets, and your wishes — drafting a will that is
+                  clear, legally robust, and reflective of your intentions.
                 </p>
                 <p style="margin-top: 1rem">
-                  We also advise on powers of attorney, guardianship, probate
-                  applications, and the administration of deceased estates. When
-                  family disputes arise over an estate, we provide experienced
-                  and sensitive counsel on your legal rights and options.
+                  We also advise on powers of attorney, appointments of enduring
+                  guardian. We act in the administration of deceased estates
+                  including applying for probate or letters of administration.
+                  We assist you the collecting in of assets, closure of bank
+                  accounts and superannuation accounts, transmission of real
+                  estate and distribution to beneficiaries.
                 </p>
                 <div
                   style="
@@ -760,16 +852,16 @@
               <div>
                 <p>
                   Whether you are starting a business, buying an existing one,
-                  or managing the legal complexity that comes with growth, our
-                  commercial solicitors provide practical, commercially-minded
-                  advice that protects your interests.
+                  or managing the legal complexity that comes with growth, we
+                  provide practical, commercially-minded advice that protects
+                  your interests.
                 </p>
                 <p style="margin-top: 1rem">
-                  We advise on business structures, commercial contracts,
-                  leases, shareholder and partnership agreements, business sales
-                  and acquisitions, and general corporate governance. Our goal
-                  is to help you avoid legal problems — and resolve them
-                  efficiently when they arise.
+                  We advise on business structures, commercial contracts and
+                  business agreements, leases, business sales and acquisitions,
+                  and general corporate governance. Our goal is to help you
+                  avoid legal problems — and resolve them efficiently when they
+                  arise.
                 </p>
                 <div
                   style="
@@ -791,7 +883,7 @@
                   </div>
                   <div
                     style="
-                      padding: 1rem 1.25px;
+                      padding: 1rem 1.25rem;
                       background: var(--cream);
                       border-left: 2px solid var(--border);
                       font-size: 0.85rem;
@@ -891,7 +983,7 @@
                     <span class="contact-info-label">Office Hours</span>
                     <div class="contact-info-value">
                       Mon – Thu: 9:00am – 5:00pm<br />
-                      Friday: 9:00am – 2:00pm<br />
+                      Friday: 9:00am – 1:00pm<br />
                       <span style="font-size: 0.82rem; color: var(--text-light)"
                         >Closed weekends & public holidays</span
                       >
@@ -909,8 +1001,8 @@
                 "
               >
                 <p style="color: rgba(255, 255, 255, 0.55); font-size: 0.85rem">
-                  We serve clients across Annandale, Glebe, Leichhardt, Balmain,
-                  Newtown, Rozelle, and the broader Inner West Sydney area.
+                  We serve clients across Annandale, the Inner West, Greater
+                  Sydney and the whole of New South Wales.
                 </p>
               </div>
             </div>
@@ -1012,7 +1104,7 @@
 
           <div class="map-container fade-in" style="margin-top: 4rem">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.0696910998367!2d151.16147248625592!3d-33.88785895098036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12b022d7606849%3A0x2517ec9874d5a258!2sDavid%20S.%20Clarke%20%26%20Associates%20with%20J.H.%20Fisher%20%26%20Sons%2C%20Solicitors!5e0!3m2!1sen!2sau!4v1772356611317!5m2!1sen!2sau"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.0696884225567!2d151.16376311172846!3d-33.88785901993535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12b022d7606849%3A0x2517ec9874d5a258!2sDavid%20S.%20Clarke%20%26%20Associates%20with%20J.H.%20Fisher%20%26%20Sons%2C%20Solicitors!5e0!3m2!1sen!2sau!4v1772955902057!5m2!1sen!2sau"
               width="600"
               height="450"
               style="border: 0"
@@ -1240,9 +1332,13 @@
               </p>
               <p style="margin-top: 0.2rem">
                 <a
-                  href="mailto:dsclarke@dsclarke.com.au"
+                  href="/cdn-cgi/l/email-protection#7d190e1e111c0f16183d190e1e111c0f1618531e1210531c08"
                   style="color: var(--navy)"
-                  >dsclarke@dsclarke.com.au</a
+                  ><span
+                    class="__cf_email__"
+                    data-cfemail="fe9a8d9d929f8c959bbe9a8d9d929f8c959bd09d9193d09f8b"
+                    >[email&#160;protected]</span
+                  ></a
                 >
               </p>
               <p style="margin-top: 0.2rem">
@@ -1319,7 +1415,7 @@
                 Mon–Thu: 9:00am – 5:00pm
               </li>
               <li style="color: rgba(255, 255, 255, 0.35)">
-                Friday: 9:00am – 2:00pm
+                Friday: 9:00am – 1:00pm
               </li>
             </ul>
             <div style="margin-top: 1.5rem">
@@ -1367,5 +1463,10 @@
         </div>
       </div>
     </footer>
+
+    <script
+      data-cfasync="false"
+      src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+    ></script>
   </body>
 </html>

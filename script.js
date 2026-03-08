@@ -1,3 +1,62 @@
+// ─── TESTIMONIAL CAROUSEL ───
+(function () {
+  const slides = document.getElementById('carouselSlides');
+  const dotsContainer = document.getElementById('carouselDots');
+  if (!slides || !dotsContainer) return;
+
+  const count = slides.children.length;
+  let current = 0;
+  let autoTimer;
+
+  // Build dots
+  for (let i = 0; i < count; i++) {
+    const d = document.createElement('div');
+    d.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+    d.addEventListener('click', () => goTo(i));
+    dotsContainer.appendChild(d);
+  }
+
+  function goTo(index) {
+    current = (index + count) % count;
+    slides.style.transform = `translateX(-${current * 100}%)`;
+    document.querySelectorAll('.carousel-dot').forEach((d, i) => {
+      d.classList.toggle('active', i === current);
+    });
+    resetAuto();
+  }
+
+  function resetAuto() {
+    clearInterval(autoTimer);
+    autoTimer = setInterval(() => goTo(current + 1), 6000);
+  }
+
+  window.carouselMove = function (dir) {
+    goTo(current + dir);
+  };
+
+  // Touch / swipe support
+  let startX = null;
+  slides.parentElement.addEventListener(
+    'touchstart',
+    (e) => {
+      startX = e.touches[0].clientX;
+    },
+    { passive: true },
+  );
+  slides.parentElement.addEventListener(
+    'touchend',
+    (e) => {
+      if (startX === null) return;
+      const diff = startX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) goTo(current + (diff > 0 ? 1 : -1));
+      startX = null;
+    },
+    { passive: true },
+  );
+
+  resetAuto();
+})();
+
 // ─── PAGE SWITCHING WITH HISTORY API ───
 function showPage(page, addToHistory = true) {
   document
@@ -54,7 +113,6 @@ window.addEventListener('scroll', () => {
 function toggleNav() {
   document.getElementById('main-nav').classList.toggle('open');
 }
-
 // ─── SCROLL ANIMATIONS ───
 const io = new IntersectionObserver(
   (entries) => {
